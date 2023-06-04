@@ -32,6 +32,7 @@ public class DBTest {
     @Test
     @Order(2)
     @DisplayName("DB Close Test")
+    @Tag("security")
     public void dbCloseTest() {
         Assertions.assertTrue(db.close(), "DB Close Error");
     }
@@ -39,6 +40,7 @@ public class DBTest {
     @Test
     @Order(3)
     @DisplayName("Customer Save Test")
+    @Tag("service")
     public void customerSaveTest() {
         Customer c = new Customer();
         c.setName("Ali Bilmem");

@@ -21,6 +21,7 @@ public class TestFile {
     }
 
     @Test
+    @Tag("security")
     void fileExistsTest () throws IOException {
         Path temp = tempDir.resolve("test.txt");
         Assertions.assertTrue( Files.exists(temp), "Temp File Fail" );

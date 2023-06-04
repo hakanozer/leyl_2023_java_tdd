@@ -35,6 +35,7 @@ public class ServiceTest {
 
     @Test
     @Order(2)
+    @Tag("service")
     public void userAllTest() throws IOException {
         Response<Users> usersResponse = iUser.users().execute();
         Users users = usersResponse.body();

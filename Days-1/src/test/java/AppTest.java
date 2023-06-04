@@ -32,6 +32,7 @@ public class AppTest {
     @Order(1)
     @Test
     @DisplayName("User Eft BDDK Control")
+    @Tag("security")
     public void bddkTest() {
         System.out.println("bddk Call");
     }
@@ -46,6 +47,7 @@ public class AppTest {
     @Order(2)
     @Test
     @DisplayName("Size 9 char Control")
+    @Tag("security")
     public void test_1() {
         System.out.println( action.hashCode() );
         int size = action.size("Java Test");

@@ -30,12 +30,14 @@ public class UseParamsTest {
 
     @ParameterizedTest
     @ValueSource( strings = { "İstanbul", "", "Ankara", "Bursa", "İzmir" } )
+    @Tag("security")
     void testSTringValues( String item ) {
         Assertions.assertTrue( !item.isEmpty(), "String item Empty Error" );
     }
 
     @ParameterizedTest
     @EnumSource(EUserType.class)
+    @Tag("service")
     void textEnumKeys( EUserType type ) {
         Object name = hmResult().get(type);
         Assertions.assertNotNull(name, "Name Null Error");
