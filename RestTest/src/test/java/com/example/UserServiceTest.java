@@ -45,4 +45,15 @@ public class UserServiceTest {
         Assertions.assertTrue( objUser.getEmail().equals("ahmet@mail.com"), "Service Email Fail" );
     }
 
+    @Test
+    void userGetTest() throws Exception {
+        MvcResult mvcResult = mockMvc.perform(
+                MockMvcRequestBuilders.get("/users/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+        ).andReturn();
+        String content = mvcResult.getRequest().getContentAsString();
+        Assertions.assertTrue( mvcResult.getResponse().getStatus() == 200 );
+        System.out.println( content );
+    }
+
 }
